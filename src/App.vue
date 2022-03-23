@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <HelloWorld :data="data" v-model="value" placeholder="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
@@ -12,6 +12,25 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data(){
+    return {
+      value:'1',
+      data:[
+        {
+          label: '上海',
+          value: '1'
+        },
+        {
+          label: '北京',
+          value: '2'
+        },
+        {
+          label: '广州',
+          value: '3'
+        }
+      ]
+    }
   }
 }
 </script>
